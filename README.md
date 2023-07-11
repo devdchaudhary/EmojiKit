@@ -10,6 +10,8 @@ iOS 15,
 Swift 5.0
 Xcode 13.0+
 
+![Simulator Screen Recording - iPhone 14 Pro - 2023-07-11 at 15 34 13](https://github.com/devdchaudhary/EmojiKit/assets/52855516/873c7a07-fcbb-4203-a0f8-fc1ef346c64a)
+
 Installation
 
 Swift Package Manager
