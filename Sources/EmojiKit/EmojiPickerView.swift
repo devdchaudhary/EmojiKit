@@ -32,7 +32,7 @@ public struct EmojiPickerView: View {
         self.reactionSelected = reactionSelected
     }
     
-    var body: some View {
+    public var body: some View {
         
         VStack {
             
