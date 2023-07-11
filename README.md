@@ -61,7 +61,7 @@ struct EmojiView: View {
                 .padding(.vertical)
             
         }
-        .fullScreenCover(isPresented: $showSheet) {
+        .sheet(isPresented: $showSheet) {
             EmojiPickerView() { name, value in
                 selectedEmoji = name
                 selectedEmojiDesc = value
