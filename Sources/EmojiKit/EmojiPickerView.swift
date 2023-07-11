@@ -16,7 +16,7 @@ public struct EmojiPickerView: View {
     @State var isSearched = false
     @State var searchQuery = ""
     
-    var reactionSelected: ((EmojiModel) -> Void)?
+    var reactionSelected: ((String, String) -> Void)?
     
     let items: [GridItem] = [
         .init(.flexible(), spacing: 0),
@@ -25,7 +25,7 @@ public struct EmojiPickerView: View {
         .init(.flexible(), spacing: 0)
     ]
     
-    public init(isSearched: Bool = false, searchQuery: String = "", reactionSelected: ((EmojiModel) -> Void)?) {
+    public init(isSearched: Bool = false, searchQuery: String = "", reactionSelected: ((String, String) -> Void)?) {
         self.emojiList = emojiList
         self.isSearched = isSearched
         self.searchQuery = searchQuery
@@ -102,7 +102,7 @@ public struct EmojiPickerView: View {
                 LazyVGrid(columns: items, spacing: 0) {
                     ForEach(emojiList, id: \.id) { emoji in
                         Button {
-                            reactionSelected?(emoji)
+                            reactionSelected?(emoji.value, emoji.name)
                             dismiss()
                         } label: {
                             Text(emoji.value)
