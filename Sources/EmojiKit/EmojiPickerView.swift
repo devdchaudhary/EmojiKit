@@ -25,7 +25,7 @@ public struct EmojiPickerView: View {
         .init(.flexible(), spacing: 0)
     ]
     
-    public init(emojiList: [EmojiModel], isSearched: Bool = false, searchQuery: String = "", reactionSelected: ((EmojiModel) -> Void)?) {
+    public init(isSearched: Bool = false, searchQuery: String = "", reactionSelected: ((EmojiModel) -> Void)?) {
         self.emojiList = emojiList
         self.isSearched = isSearched
         self.searchQuery = searchQuery
