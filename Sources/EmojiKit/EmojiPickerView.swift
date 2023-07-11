@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmojiPickerView: View {
+public struct EmojiPickerView: View {
     
     @Environment(\.dismiss) var dismiss
     
